@@ -177,7 +177,7 @@ fi
 cpu_tempx="$(echo ${cpu_temp} | sed -e 's/°C//g' -e 's/[ ][ ]*//g')"
 [[ "$(echo ${cpu_tempx} | awk -F'.' '{print $1}' | wc -c)" -gt "3" ]] && cpu_tempx="${cpu_tempx:0:2}.0"
 # board type
-stb="WIFIKU Networks MM V1V2"
+stb="WIFIKU Networks MM HGP"
 print_machine() {
 	local Machine=""
 	local HostName=$(uci -q get system.@system[0].hostname)
