@@ -1,3 +1,4 @@
+PART 1
 ~~~
 # INSTALL AUTO TIME SYNC
 opkg update && wget --no-check-certificate "https://raw.githubusercontent.com/wifikunetworks/hgp/main/autotimesync.sh" -O /usr/bin/autotimesync.sh && chmod +x /usr/bin/autotimesync.sh
@@ -21,9 +22,10 @@ opkg remove --force-remove luci-app-lite-watchdog && rm /etc/modem/log.txt && wg
 opkg remove --force-remove luci-app-sms-tool-js && rm /etc/config/sms_tool_js && wget --no-check-certificate -P /root https://raw.githubusercontent.com/wifikunetworks/hgp/main/luci-app-sms-tool-js_2.0.20-20240201_all.ipk && opkg install --force-reinstall /root/luci-*-sms*.ipk && rm /root/*.ipk
 
 # INSTALL OPENCLASH
-opkg update && wget --no-check-certificate -P /root "https://github.com/wifikunetworks/hg680p/raw/main/luci-app-openclash_0.46.003-beta_all.ipk" && opkg install --force-overwrite /root/luci-*-openclash*.ipk && rm /root/*.ipk
-
-
+wget --no-check-certificate -P /root "https://github.com/wifikunetworks/hg680p/raw/main/luci-app-openclash_0.46.003-beta_all.ipk" && opkg install --force-overwrite /root/luci-*-openclash*.ipk && rm /root/*.ipk
+~~~
+PART 2
+~~~
 wget --no-check-certificate "https://raw.githubusercontent.com/wifikunetworks/hg680p/main/autotimesync.sh" -O /usr/bin/autotimesync.sh && chmod +x /usr/bin/autotimesync.sh
 wget -O /etc/config/system https://raw.githubusercontent.com/wifikunetworks/hg680p/main/system
 wget -O /etc/config/wireless https://raw.githubusercontent.com/wifikunetworks/hg680p/main/wireless
@@ -49,4 +51,7 @@ chain mangle_prerouting_ttl65 {
   counter ip ttl set 65
 }" > /etc/nftables.d/10-custom-filter-chains.nft
 service firewall restart
+
+
+
 ~~~
