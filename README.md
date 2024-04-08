@@ -38,7 +38,7 @@ wget --no-check-certificate -O /usr/share/ucode/luci/template/sysauth.ut https:/
 wget --no-check-certificate -O /etc/banner https://raw.githubusercontent.com/wifikunetworks/hg680p/main/banner
 wget --no-check-certificate -O /usr/share/ucode/luci/template/themes/material/header.ut https://raw.githubusercontent.com/wifikunetworks/hg680p/main/header.ut
 wget --no-check-certificate -O /usr/share/ucode/luci/template/themes/material/footer.ut https://raw.githubusercontent.com/wifikunetworks/hg680p/main/footer.ut
-wget --no-check-certificate -O  /usr/bin/lite_watchdog.sh https://raw.githubusercontent.com/wifikunetworks/v1v2/main/lite_watchdog.sh && chmod +x /usr/bin/lite_watchdog.sh
+wget --no-check-certificate -O /usr/bin/lite_watchdog.sh https://raw.githubusercontent.com/wifikunetworks/hg680p/main/lite_watchdog.sh && chmod +x /usr/bin/lite_watchdog.sh 
 wget --no-check-certificate -P /tmp https://raw.githubusercontent.com/wifikunetworks/hg680p/main/mm.ipk && opkg install --force-reinstall /tmp/mm.ipk
 
 echo "chain mangle_postrouting_ttl65 {
